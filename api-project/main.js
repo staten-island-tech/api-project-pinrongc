@@ -21,3 +21,28 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+
+const dictionary = "https://dictionaryapi.dev/";
+
+async function getData(URL);
+try{
+  const response = await fetch(url);
+  if(response.status <200 || response.status >299){
+    console.log(response.status);
+    throw error(response);
+  }else {
+    const data = await response.json();
+    document.getElementById("api-response").textContent = data.name;
+    console.log(data);}
+  } 
+  
+  catch (error){
+    console.log(error);
+    console.log("sad");
+    document.getElementById("api-response").textContent = 
+    "Sorry I couldn't find that one";
+  } 
+
+
+
