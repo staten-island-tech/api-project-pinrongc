@@ -23,9 +23,9 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 
-const dictionary = "https://dictionaryapi.dev/";
+const Dictionary = "https://dictionaryapi.dev/";
 
-async function getData(URL);
+async function getData(url) {
 try{
   const response = await fetch(url);
   if(response.status <200 || response.status >299){
@@ -35,14 +35,18 @@ try{
     const data = await response.json();
     document.getElementById("api-response").textContent = data.name;
     console.log(data);}
-  } 
-  
-  catch (error){
+  } catch (error){
     console.log(error);
     console.log("sad");
-    document.getElementById("api-response").textContent = 
-    "Sorry I couldn't find that one";
+  
   } 
+}
+
+  getData(Dictionary);
+
+/*   document.getElementById("api-response")
+  .textContent = 
+  "Sorry I couldn't find that one"; */
 
 
 
