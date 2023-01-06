@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 
-const Dictionary = "https://dictionaryapi.dev/";
+const Gallery = "https://unsplash.com/developers"
 
 async function getData(url) {
 try{
@@ -34,19 +34,22 @@ try{
   }else {
     const data = await response.json();
     document.getElementById("api-response").textContent = data.name;
-    console.log(data);}
-  } catch (error){
+    console.log(data);
+  }
+
+} catch (error){
     console.log(error);
     console.log("sad");
+    document.getElementById("api-response").textContent = 
+  "Sorry I couldn't find that one"; 
+
   
   } 
 }
 
-  getData(Dictionary);
+  getData(Gallery);
 
-/*   document.getElementById("api-response")
-  .textContent = 
-  "Sorry I couldn't find that one"; */
+
 
 
 
