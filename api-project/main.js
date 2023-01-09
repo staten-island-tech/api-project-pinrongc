@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 
-const Gallery = "https://unsplash.com/developers"
+const Gallery = "http://shibe.online/api/shibes"
 
 async function getData(url) {
 try{
@@ -40,10 +40,6 @@ try{
 } catch (error){
     console.log(error);
     console.log("sad");
-    document.getElementById("api-response").textContent = 
-  "Sorry I couldn't find that one"; 
-
-  
   } 
 }
 
