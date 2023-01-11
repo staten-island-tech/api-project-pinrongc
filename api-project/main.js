@@ -1,6 +1,6 @@
 import './style.css'
 
-const Gallery = "https://random-words-api.vercel.app/word"
+const Gallery = "https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=PROJECT"
 
 async function getData(url) {
 try{
