@@ -1,6 +1,6 @@
 import './style.css'
 
-const Gallery = "https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=PROJECT"
+const Gallery = "https://official-joke-api.appspot.com/random_joke"
 
 async function getData(url) {
 try{
@@ -10,8 +10,7 @@ try{
     throw error(response);
   }else {
     const data = await response.json();
-    document.getElementById("api-response").insertAdjacentHTML("afterend", `<img src="${data}" alt="">`);
-    console.log(data);
+    document.getElementById("api-response").insertAdjacentHTML("beforeend", `${data.setup} ${data.punchline}`);
   }
 
 } catch (error){
