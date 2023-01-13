@@ -1,6 +1,6 @@
 import './style.css'
 
-const Gallery = "https://official-joke-api.appspot.com/random_joke"
+const Gallery = "https://randomfox.ca/floof"
 
 async function getData(url) {
 try{
@@ -10,7 +10,10 @@ try{
     throw error(response);
   }else {
     const data = await response.json();
-    document.getElementById("api-response").insertAdjacentHTML("beforeend", `${data.setup} ${data.punchline}`);
+    document.getElementById("api-response").insertAdjacentHTML("afterend", `<img src="${data.image}" alt="">`);
+    console.log(data)
+    
+    //.insertAdjacentHTML("beforeend", `${data.setup} ${data.punchline}`);
   }
 
 } catch (error){
