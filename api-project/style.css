@@ -1,0 +1,13 @@
+.header {
+    background-repeat: no-repeat;
+    background-image: url("https://media.istockphoto.com/id/1138411284/photo/empty-wooden-table-top-with-blur-coffee-shop-or-restaurant-interior-background.jpg?s=612x612&w=0&k=20&c=3x1xdfAwNg59fRzE5_QlTHNy4jRlPzNYvcL94cmEap8=");
+    height: 120px;
+    width: 500px;
+    padding: 5rem;
+    padding-top: 3rem;
+    border-radius: 100%;
+    margin: auto;
+    text-align: center;
+
+
+}
