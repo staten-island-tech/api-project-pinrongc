@@ -24,7 +24,22 @@ try{
 
   getData(Gallery);
 
+/* const DOMselectors = {
+  refresh: document.getElementById ("refresh-button")
+}
+console.log (DOMselectors)
 
+  
+ DOMselectors.refreshButton.addEventListener("click", function (){location.reload()
+ }
+ 
+ ) 
 
+ */
+ const refreshButton = document.querySelector(".refresh-button");
 
-
+ const refreshPage = () => {
+   location.reload();
+ }
+ 
+ refreshButton.addEventListener("click", refreshPage)

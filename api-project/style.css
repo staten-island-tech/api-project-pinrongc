@@ -1,13 +1,19 @@
 .header {
     background-repeat: no-repeat;
-    background-image: url("https://media.istockphoto.com/id/1138411284/photo/empty-wooden-table-top-with-blur-coffee-shop-or-restaurant-interior-background.jpg?s=612x612&w=0&k=20&c=3x1xdfAwNg59fRzE5_QlTHNy4jRlPzNYvcL94cmEap8=");
+    background-image: url("https://t4.ftcdn.net/jpg/05/38/47/09/360_F_538470909_eb9VHJB3kEZTAm1mM7v0Eqrkc2VeZZma.jpg");
     height: 120px;
-    width: 500px;
+    width: 300px;
     padding: 5rem;
-    padding-top: 3rem;
-    border-radius: 100%;
+    padding-top: 4rem;
     margin: auto;
     text-align: center;
+}
 
-
+img {
+    height: 30rem;
+    width: auto;
+    border-radius: 10px;
+    max-width: 100%;
+    margin-left: 50%;
+    margin-right: 50%;
 }
