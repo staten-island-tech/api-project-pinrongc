@@ -7,13 +7,18 @@
     padding-top: 4rem;
     margin: auto;
     text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(240, 248, 255);
 }
 
 img {
     height: 30rem;
     width: auto;
     border-radius: 10px;
-    max-width: 100%;
-    margin-left: 50%;
-    margin-right: 50%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(206, 186, 160);
 }

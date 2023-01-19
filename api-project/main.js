@@ -24,22 +24,25 @@ try{
 
   getData(Gallery);
 
-/* const DOMselectors = {
-  refresh: document.getElementById ("refresh-button")
+const DOMselectors = {
+  refresh: document.getElementById ("refresh-button"),
+  fox: document.getElementById("fox")
 }
-console.log (DOMselectors)
+console.log(DOMselectors)
 
-  
- DOMselectors.refreshButton.addEventListener("click", function (){location.reload()
- }
+DOMselectors.fox.addEventListener ("click", function (){
+getData(Gallery);
+})  
+
+DOMselectors.refreshButton.addEventListener("click", function (){location.reload()}
+) 
+
  
- ) 
-
- */
- const refreshButton = document.querySelector(".refresh-button");
+/*  const refreshButton = document.querySelector(".refresh-button");
 
  const refreshPage = () => {
    location.reload();
  }
  
- refreshButton.addEventListener("click", refreshPage)
+ refreshButton.addEventListener("click", refreshPage) */
+
