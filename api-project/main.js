@@ -26,7 +26,8 @@ try{
 
 const DOMselectors = {
   refresh: document.getElementById ("refresh-button"),
-  fox: document.getElementById("fox")
+  fox: document.getElementById("fox"),
+  remove: document.getElementById("removebtn")
 }
 console.log(DOMselectors)
 
@@ -37,7 +38,14 @@ getData(Gallery);
 DOMselectors.refreshButton.addEventListener("click", function (){location.reload()}
 ) 
 
+function remove (){
+  let removebtn = document.getElementById(`removebtn`)
+  removebtn.addEventListener("click", function(){
+    document.getElementById(``).remove()
+  })
+}
  
+remove();
 /*  const refreshButton = document.querySelector(".refresh-button");
 
  const refreshPage = () => {
