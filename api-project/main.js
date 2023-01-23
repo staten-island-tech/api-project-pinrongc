@@ -31,6 +31,7 @@ const DOMselectors = {
 }
 console.log(DOMselectors)
 
+
 DOMselectors.fox.addEventListener ("click", function (){
 getData(Gallery);
 })  
@@ -41,7 +42,7 @@ DOMselectors.refreshButton.addEventListener("click", function (){location.reload
 function remove (){
   let removebtn = document.getElementById(`removebtn`)
   removebtn.addEventListener("click", function(){
-    document.getElementById(``).remove()
+    document.getElementById(`display-card`).remove()
   })
 }
  
