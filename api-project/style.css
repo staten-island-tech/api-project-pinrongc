@@ -23,14 +23,6 @@ img {
 
 body {
     overflow-x: hidden;
-    background-color: rgb(192, 181, 218);
+    background-color: rgb(206, 186, 160);
 
-}
-
-button {
-    width: 150px;
-    height: 30px;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    font-size: 20px;
 }

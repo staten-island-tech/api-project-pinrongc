@@ -23,6 +23,7 @@ try{
   getData(Gallery);
 
 const DOMselectors = {
+  refresh: document.getElementById ("refresh-button"),
   fox: document.getElementById("fox"),
   remove: document.getElementById("removebtn")
 }
