@@ -42,11 +42,13 @@ DOMselectors.refreshButton.addEventListener("click", function (){location.reload
 function remove (){
   let removebtn = document.getElementById(`removebtn`)
   removebtn.addEventListener("click", function(){
-    document.getElementById(`display-card`).remove()
+    document.getElementById(`image`).remove()
   })
 }
- 
+
 remove();
+
+
 /*  const refreshButton = document.querySelector(".refresh-button");
 
  const refreshPage = () => {
