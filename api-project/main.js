@@ -1,6 +1,6 @@
 import './style.css'
 
-const Gallery = "https://randomfox.ca/floof"
+const Gallery = "https://tasty.p.rapidapi.com/recipes/auto-complet"
 
 async function getData(url) {
 try{
@@ -38,14 +38,23 @@ getData(Gallery);
 DOMselectors.refreshButton.addEventListener("click", function (){location.reload()}
 ) 
 
-function remove (){
-  let removebtn = document.getElementById(`removebtn`)
-  removebtn.addEventListener("click", function(){
-    document.getElementById(`image`).remove()
+/* function remove (){
+  let removebtn = document.querySelectorAll(`removebtn`);
+  removebtn.forEach((btn) =>{
+ btn.addEventListener("click", function(element){
+let card = element.target.parentElement;
+card.remove();
+  }
+
+
+  */
+/*     document.getElementById(`image`).remove()
   })
 }
 
-remove();
+remove(); */
+
+
 
 
 /*  const refreshButton = document.querySelector(".refresh-button");
