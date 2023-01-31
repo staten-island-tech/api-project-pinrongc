@@ -1,6 +1,6 @@
-import './style.css'
+import '../style.css'
 
-const Gallery = "https://tasty.p.rapidapi.com/recipes/auto-complet"
+const Gallery = "https://randomfox.ca"
 
 async function getData(url) {
 try{
@@ -10,10 +10,8 @@ try{
     throw error(response);
   }else {
     const data = await response.json();
-    document.getElementById("api-response").insertAdjacentHTML("afterend", `<img src="${data.image}" alt="">`);
+    document.getElementById("api-response").textContent = data.name;
     console.log(data)
-    
-    //.insertAdjacentHTML("beforeend", `${data.setup} ${data.punchline}`);
   }
 
 } catch (error){
@@ -24,19 +22,22 @@ try{
 
   getData(Gallery);
 
-const DOMselectors = {
-  fox: document.getElementById("fox"),
-  remove: document.getElementById("removebtn")
-}
-console.log(DOMselectors)
+//const DOMselectors = {
+  //fox: document.getElementById("fox"),
+  //remove: document.getElementById("removebtn")
+//}
+//console.log(DOMselectors)
 
 
-DOMselectors.fox.addEventListener ("click", function (){
-getData(Gallery);
-})  
+//DOMselectors.fox.addEventListener ("click", function (){
+//getData(Gallery);
+//})  
 
-DOMselectors.refreshButton.addEventListener("click", function (){location.reload()}
-) 
+
+DOMselectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+
+
 
 /* function remove (){
   let removebtn = document.querySelectorAll(`removebtn`);
@@ -64,4 +65,3 @@ remove(); */
  }
  
  refreshButton.addEventListener("click", refreshPage) */
-
