@@ -22,16 +22,16 @@ try{
 
   getData(Gallery);
 
-//const DOMselectors = {
-  //fox: document.getElementById("fox"),
-  //remove: document.getElementById("removebtn")
-//}
-//console.log(DOMselectors)
+const DOMselectors = {
+  fox: document.getElementById("fox"),
+  remove: document.getElementById("removebtn")
+}
+console.log(DOMselectors)
 
 
-//DOMselectors.fox.addEventListener ("click", function (){
-//getData(Gallery);
-//})  
+DOMselectors.fox.addEventListener ("click", function (){
+getData(Gallery);
+})  
 
 
 DOMselectors.form.addEventListener("submit", function(event){
@@ -39,23 +39,14 @@ DOMselectors.form.addEventListener("submit", function(event){
 
 
 
-/* function remove (){
-  let removebtn = document.querySelectorAll(`removebtn`);
-  removebtn.forEach((btn) =>{
- btn.addEventListener("click", function(element){
-let card = element.target.parentElement;
-card.remove();
-  }
-
-
-  */
-/*     document.getElementById(`image`).remove()
+function remove (){
+  let removebtn = document.getElementById(`removebtn`)
+  removebtn.addEventListener("click", function(){
+    document.getElementById(`image`).remove()
   })
 }
 
-remove(); */
-
-
+remove();
 
 
 /*  const refreshButton = document.querySelector(".refresh-button");
