@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Gallery = "https://pokeapi.co/api/v2/pokemon/";
+const Gallery = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
 
 async function getData(url) {
   try {
@@ -11,11 +11,17 @@ async function getData(url) {
       throw error(response);
     } else {
       const data = await response.json();
-
+/* 
+DOMselectors.box.insertAdjacentHTML{
+  "afterbegin",
+  `<div class="poke"> 
+<h2 class="name">${data.name}</h2>
+</div>`
+}
+ */
 /* data.abilities.forEach(() => 
 document.querySelector(".abilities").insertAdjacentHTML("afterbegin",`<li class="list-item">${.abilities.name}</li>`
 )); */
-
       const pokemonArray = data.results;
       console.log(pokemonArray);
       function displayPokemon() {
@@ -43,6 +49,8 @@ const DOMselectors = {
   display: document.getElementById("display"),
   form: document.getElementById("form"),
 };
+
+
 
 document.getElementById("search").onkeyup = function searchFunction(){
   const input = document.getElementById("search").value.toUpperCase();
