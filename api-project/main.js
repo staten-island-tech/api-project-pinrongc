@@ -1,59 +1,62 @@
-import '../style.css'
 
-const Gallery = "https://randomfox.ca"
+const Gallery = " https://pokeapi.co/api/v2/pokemon/"
 
 async function getData(url) {
 try{
   const response = await fetch(url);
+
   if(response.status <200 || response.status >299){
     console.log(response.status);
     throw error(response);
   }else {
     const data = await response.json();
-    document.getElementById("api-response").textContent = data.name;
-    console.log(data)
-  }
+    const pokemonArray = data.results;
 
-} catch (error){
+    console.log(pokemonArray);
+
+    function displayPokemon(){
+      pokemonArray.forEach((pokemon) => {
+        DOMselectors.display.insertAdjacentHTML("afterbegin", <div id= "pokemon"> <h2> ${pokemon.name} </h2></div>);
+      });
+    }
+
+    displayPokemon();
+  }
+} 
+
+catch(error){
     console.log(error);
     console.log("sad");
   } 
 }
-
   getData(Gallery);
 
+
+document.getElementById("SearchBar").onkeyup = function searchFunction(){
+  const input = document.getElementById("SearchBar").value.toUpperCase();
+  const pokemon = 
+  document.querySelectorAll(".pokemon");
+  const pokemonContent = document.getElementsByTagName("h2");
+}  
+
+
+
 const DOMselectors = {
-  refresh: document.getElementById ("refresh-button"),
-  fox: document.getElementById("fox"),
-  remove: document.getElementById("removebtn")
-}
-console.log(DOMselectors)
-
-
-DOMselectors.fox.addEventListener ("click", function (){
-getData(Gallery);
-})  
+  pokemon: document.getElementById("pokemon"),
+  display: document.getElementById("display"),
+  form: document.getElementById("form")
+}; 
 
 
 DOMselectors.form.addEventListener("submit", function(event){
   event.preventDefault();
+});
+
+console.log(DOMselectors)
+
+
+//DOMselectors.pokemon.addEventListener("click", getData(Gallery))
 
 
 
-function remove (){
-  let removebtn = document.getElementById(`removebtn`)
-  removebtn.addEventListener("click", function(){
-    document.getElementById(`image`).remove()
-  })
-}
 
-remove();
-
-
-/*  const refreshButton = document.querySelector(".refresh-button");
-
- const refreshPage = () => {
-   location.reload();
- }
- 
- refreshButton.addEventListener("click", refreshPage) */
