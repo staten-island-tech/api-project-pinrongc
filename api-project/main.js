@@ -53,8 +53,8 @@ console.log(DOMselectors);
 
 DOMselectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
-  let pokemon = DOMselectors.name.value;
-  const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+  let result = DOMselectors.name.value.toLowerCase();
+  const URL = `https://pokeapi.co/api/v2/pokemon/${result}`;
   getData(URL);
   clear();
 }); 
