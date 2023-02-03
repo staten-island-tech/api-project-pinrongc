@@ -25,7 +25,7 @@ DOMselectors.box.insertAdjacentHTML(
 data.abilities.forEach((pokemon) => 
 document
 .querySelector(".abilities").insertAdjacentHTML("afterbegin",
-`<li class="list">${pokemon.ability.name}</li>`
+`<li class="list">${pokemon.abilities.name}</li>`
 )
 ); 
   }
