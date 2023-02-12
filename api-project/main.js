@@ -7,7 +7,8 @@ async function getData(url) {
  try {
     const response = await fetch(url);
     if (response.status < 200 || response.status > 299) {
-    /*   console.log(response.status); */
+    console.log(response.status); 
+
       throw error(response);
     } else {
       const data = await response.json();
@@ -34,12 +35,16 @@ document
   catch (error) {
     console.log(error);
     console.log("sad");
+    DOMselectors.box.insertAdjacentHTML(
+      "afterbegin",
+      `<h1 class= "sad"> Sorry I couldn't find that one</h1>`
+    );
  }
 }
 
  function clear() {
   DOMselectors.name.value = "";
-  DOMselectors.box.innerHTML = "";
+  DOMselectors.boxinnerHTML = "";
  } 
 
 const DOMselectors = {
