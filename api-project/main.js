@@ -37,14 +37,14 @@ document
     console.log("sad");
     DOMselectors.box.insertAdjacentHTML(
       "afterbegin",
-      `<h1 class= "sad"> Sorry I couldn't find that one</h1>`
+      `<h1 class= "sad"> Sorry I couldn't find that one :( </h1>`
     );
  }
 }
 
  function clear() {
   DOMselectors.name.value = "";
-  DOMselectors.boxinnerHTML = "";
+  DOMselectors.box.innerHTML = "";
  } 
 
 const DOMselectors = {
