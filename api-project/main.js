@@ -1,7 +1,8 @@
 import "./style.css";
 
 //const Gallery = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
-//const poke = "https://pokeapi.co/api/v2/pokemon/"
+
+const ditto = "https://pokeapi.co/api/v2/pokemon/ditt0";
 
 async function getData(url) {
  try {
@@ -63,3 +64,7 @@ DOMselectors.form.addEventListener("submit", function (event) {
   getData(URL);
   clear();
 }); 
+
+let first = "ditto";
+const url = `https://pokeapi.co/api/v2/pokemon/${first}`;
+getData(url);
